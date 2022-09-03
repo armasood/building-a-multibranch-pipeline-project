@@ -11,13 +11,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'node --version'
-                sh 'su npm install'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
-                sh 'su ./jenkins/scripts/test.sh'
+                sh './jenkins/scripts/test.sh'
             }
         }
     }
