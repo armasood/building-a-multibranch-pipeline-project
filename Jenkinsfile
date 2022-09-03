@@ -12,12 +12,12 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'node --version'
-                sh 'npm install'
+                sh 'sudo npm install'
             }
         }
         stage('Test') {
             steps {
-                sh './jenkins/scripts/test.sh'
+                sh 'sudo ./jenkins/scripts/test.sh'
             }
         }
     }
